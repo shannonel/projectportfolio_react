@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import 'font-awesome/css/font-awesome.css'
+import 'bootstrap-social/bootstrap-social.css'
 
 class LandingPage extends Component {
     constructor(props){
