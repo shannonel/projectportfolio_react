@@ -1,0 +1,109 @@
+@import "/src/css/shared.scss";
+
+$color-projects: #9C12C9;
+$color-skills:#6919B3;
+$color-bio:#4814CC;
+$color-interact:#721877;
+
+$color-dark-transparent:rgba(0,0,0,0.5);
+
+$breakpoints: (
+    'small':  576px,
+    'medium': 768px,
+    'large':  992px,
+    'xlarge': 1200px,
+    'xxlarge': 1400px
+) !default;
+
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+    }
+    }
+    // If the key doesn't exist in the map
+    @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin mixinXSscreen($size,$breakpoint){}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.projectBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: $color-projects;
+  @include respond-to('small') {
+      height: 50vh;
+  }
+  height:25vh;
+}
+.interactBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: $color-interact;
+  @include respond-to('small') {
+      height: 50vh;
+  }
+  height:25vh;
+}
+.bioBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: $color-bio;
+  @include respond-to('small') {
+      height: 50vh;
+  }
+  height:25vh;
+}
+.skillsBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: $color-skills;
+  @include respond-to('small') {
+      height: 50vh;
+  }
+  height:25vh;
+}

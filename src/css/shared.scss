@@ -1,0 +1,66 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$color-projects: #9C12C9;
+$color-skills:#6919B3;
+$color-bio:#4814CC;
+$color-interact:#721877;
+
+$color-dark-transparent:rgba(0,0,0,0.5);
+
+$breakpoints: (
+    'small':  576px,
+    'medium': 768px,
+    'large':  992px,
+    'xlarge': 1200px,
+    'xxlarge': 1400px
+) !default;
+
+@mixin respond-to($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+      // Prints a media query based on the value
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+    }
+    }
+    // If the key doesn't exist in the map
+    @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+@mixin mixinXSscreen($size,$breakpoint){}
+
+.divProjectBox{
+    background-color: $color-projects;
+    @include respond-to('small') {
+        height: 50vh;
+    }
+    height:25vh;
+}
+.divSkillsBox{
+    background-color: $color-skills;
+    @include respond-to('small') {
+        height: 50vh;
+    }
+    height:25vh;
+}
+.divInteractBox{
+    background-color: $color-interact;
+    @include respond-to('small') {
+        height: 50vh;
+    }
+    height:25vh;
+}
+.divBioBox{
+    background-color: $color-bio;
+    @include respond-to('small') {
+        height: 50vh;
+    }
+    height:25vh;
+}
+.container-screen{
+    min-height: 100vh;
+    max-height: 100vh;
+}

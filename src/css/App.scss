@@ -1,3 +1,5 @@
+@import "/src/css/shared.scss";
+
 .App {
   text-align: center;
 }
@@ -35,4 +37,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.divProjectBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: $color-projects;
+  @include respond-to('small') {
+      height: 50vh;
+  }
+  height:25vh;
+}
+.divInteractBox{
+  color: whitesmoke;
+  font: xx-large
+}
+.divBioBox{
+  color: whitesmoke;
+  font: xx-large
+}
+.divSkillsBox{
+  color: whitesmoke;
+  font: xx-large
 }

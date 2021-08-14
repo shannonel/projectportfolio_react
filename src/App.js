@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './css/App.scss';
 import LandingPage from './shared/LandingPage';
 import { BrowserRouter } from 'react-router-dom';
 import createRoutes from './shared/Router'

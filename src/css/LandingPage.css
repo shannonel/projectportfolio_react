@@ -1,0 +1,77 @@
+/* 
+$color-projects: #9C12C9;
+$color-skills:#6919B3;
+$color-bio:#4814CC;
+$color-interact:#721877;
+
+$color-dark-transparent:rgba(0,0,0,0.5);
+
+$breakpoints: (
+    'small':  576px,
+    'medium': 768px,
+    'large':  992px,
+    'xlarge': 1200px,
+    'xxlarge': 1400px
+) !default; 
+*/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.projectBox{
+  color: whitesmoke;
+  font: xx-large;
+  background-color: #9C12C9;
+  height:25vh;
+}
+.interactBox{
+  color: whitesmoke;
+  font: xx-large;
+  height:25vh;
+}
+.bioBox{
+  color: whitesmoke;
+  font: xx-large;
+  height:25vh;
+}
+.skillsBox{
+  color: whitesmoke;
+  font: xx-large;
+  height:25vh;
+}
